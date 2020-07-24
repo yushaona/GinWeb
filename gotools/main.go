@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"time"
 	"unicode"
 )
 
@@ -15,8 +14,6 @@ func main() {
 	flag.Parse()
 
 	fmt.Printf("name: %s \n", name)
-	time.Parse()
 	s := "ab"
 	fmt.Println(string(unicode.ToUpper(rune(s[0]))) + s[1:])
-v                                                                                                                                                                                                                 
 }

@@ -1,3 +1,6 @@
+/*
+信号的接受
+*/
 package main
 
 import (
@@ -21,7 +24,7 @@ func main() {
 		syscall.SIGTERM,
 	}
 	wg = sync.WaitGroup{}
-	
+
 	signal.Notify(c, hookableSignals...)
 	wg.Add(1)
 	go listenSignal()

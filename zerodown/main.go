@@ -23,6 +23,7 @@ import (
 	"os"
 	"os/exec"
 	"os/signal"
+	"strconv"
 	"syscall"
 	"time"
 )
@@ -35,7 +36,11 @@ var (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	time.Sleep(20 * time.Second)
-	w.Write([]byte("hello world233333!!!!"))
+
+	pid := os.Getpid()
+
+	res := "hello world,pid:" + strconv.Itoa(pid)
+	w.Write([]byte(res))
 }
 
 func main() {
